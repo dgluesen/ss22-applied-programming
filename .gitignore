@@ -155,3 +155,5 @@ dmypy.json
 *.snm
 *.synctex.gz
 *.sty
+*.tex
+fig/
