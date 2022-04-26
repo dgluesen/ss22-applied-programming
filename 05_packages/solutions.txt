@@ -1,0 +1,23 @@
+Fancy Indexing
+
+a = np.array([[6, 1, 8], [4, 3, 7], [9, 5, 2]])
+
+a[:, [1, 2, 1]]
+a[:, [1, 2, 1]][[0, 0, 0], [[1, 0, 1], [0, 1, 0], [1, 0, 1]]]
+
+
+--------------------------------------
+DataFrame
+
+df = pd.DataFrame({'A': [1, 2, 3],
+                   'B': [4, 5, 6],
+                   'C': [7, 8, 9]})
+                   
+                   
+--------------------------------------
+PSE
+
+pse[(pse.symbol == "Fe")].loc[:, ['symbol', 'atomic_number']]
+
+pse_exercise = pse[pse['atomic_number'] <= 10].loc[:, ['name', 'symbol', 'atomic_number']].copy()
+pse_exercise
