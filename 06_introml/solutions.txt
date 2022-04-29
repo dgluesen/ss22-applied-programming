@@ -1,0 +1,31 @@
+Datasets
+--------
+
+from sklearn.datasets import load_iris
+
+X_iris, y_iris = load_iris(return_X_y = True, as_frame = True)
+
+df_iris = pd.concat([X_iris, y_iris], axis = 1)
+df_iris
+
+sns.pairplot(df_iris, hue = 'target', markers = ['o', 's', 'D'], palette = 'tab10')
+plt.draw()
+
+---
+
+from sklearn.datasets import load_diabetes
+
+X_dia, y_dia = load_diabetes(return_X_y = True, as_frame = True)
+
+df_dia = pd.concat([X_dia, y_dia], axis = 1)
+df_dia
+
+sns.pairplot(df_dia, hue = 'target', palette = 'icefire', diag_kind = None)
+plt.draw()
+
+
+
+Decision Tree
+-------------
+
+
